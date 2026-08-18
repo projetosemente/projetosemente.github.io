@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Projeto Semente</title>
+
+    <meta name="description"
+          content="Área administrativa do Projeto Semente">
+
+    <meta name="theme-color" content="#05401F">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+    <!-- CSS público -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- CSS administrativo -->
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body class="admin-body">
+
+    <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="admin-brand">
+
+            <a href="../index.html" class="admin-logo">
+
+                <img
+                    src="../assets/img/logo1.png"
+                    alt="Projeto Semente"
+                >
+
+            </a>
+
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Fechar menu"
+            >
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+        </div>
+
+
+        <div class="admin-profile">
+
+            <div class="profile-avatar">
+                <i class="bi bi-person-fill"></i>
+            </div>
+
+            <div class="profile-info">
+
+                <strong>Administrador</strong>
+
+                <span>
+                    <i class="bi bi-circle-fill"></i>
+                    Online
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <span class="nav-title">
+                PRINCIPAL
+            </span>
+
+            <a href="index.html" class="admin-nav-link active">
+
+                <i class="bi bi-grid-1x2-fill"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <span class="nav-title">
+                GESTÃO
+            </span>
+
+            <a href="#" class="admin-nav-link">
+
+                <i class="bi bi-people-fill"></i>
+
+                <span>Alunos</span>
+
+                <small>450</small>
+
+            </a>
+
+
+            <a href="#" class="admin-nav-link">
+
+                <i class="bi bi-person-vcard-fill"></i>
+
+                <span>Responsáveis</span>
+
+            </a>
+
+
+            <a href="#" class="admin-nav-link">
+
+                <i class="bi bi-mortarboard-fill"></i>
+
+                <span>Professores</span>
+
+                <small>18</small>
+
+            </a>
+
+
+            <a href="#" class="admin-nav-link">
+
+                <i class="bi bi-collection-fill"></i>
+
+                <span>Turmas</span>
+
+                <small>12</small>
+
+            </a>
+
+
+            <a href="#" class="admin-nav-link">
+
+                <i class="bi bi-clipboard-check-fill"></i>
+
+                <span>Pré-matrículas</span>
+
+                <small class="nav-badge">24</small>
+
+            </a>
+
+
+            <span class="nav-title">
+                SISTEMA
+            </span>
+
+
+            <a href="#" class="admin-nav-link">
+
+                <i class="bi bi-bar-chart-fill"></i>
+
+                <span>Relatórios</span>
+
+            </a>
+
+
+            <a href="#" class="admin-nav-link">
+
+                <i class="bi bi-gear-fill"></i>
+
+                <span>Configurações</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <a href="../index.html" class="back-site">
+
+                <i class="bi bi-arrow-left"></i>
+
+                Voltar ao site
+
+            </a>
+
+
+            <a href="../index.html" class="logout-link">
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                Sair
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         ÁREA PRINCIPAL
+    ========================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- HEADER -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+
+                <button
+                    class="sidebar-toggle"
+                    id="sidebarToggle"
+                    aria-label="Abrir menu"
+                >
+                    <i class="bi bi-list"></i>
+                </button>
+
+
+                <div>
+
+                    <span class="breadcrumb">
+                        Administração
+                    </span>
+
+                    <h1>Dashboard</h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button
+                    class="header-icon"
+                    aria-label="Notificações"
+                >
+
+                    <i class="bi bi-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="admin-user">
+
+                    <div class="user-avatar">
+                        A
+                    </div>
+
+                    <div class="user-data">
+
+                        <strong>Administrador</strong>
+
+                        <span>Administrador</span>
+
+                    </div>
+
+                    <i class="bi bi-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTEÚDO -->
+
+        <section class="admin-content">
+
+
+            <!-- BOAS-VINDAS -->
+
+            <div class="welcome-box">
+
+                <div>
+
+                    <span class="welcome-label">
+                        PAINEL ADMINISTRATIVO
+                    </span>
+
+                    <h2>
+                        Bem-vindo ao Projeto Semente! 🌱
+                    </h2>
+
+                    <p>
+                        Aqui você acompanha os principais dados,
+                        matrículas e atividades do projeto.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-icon">
+
+                    <i class="bi bi-flower1"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 CARDS
+            ================================================== -->
+
+            <div class="stats-grid">
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <i class="bi bi-people-fill"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Alunos atendidos</span>
+
+                        <strong>450</strong>
+
+                        <small class="positive">
+
+                            <i class="bi bi-arrow-up"></i>
+
+                            8,4% este ano
+
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <i class="bi bi-collection-fill"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Turmas ativas</span>
+
+                        <strong>12</strong>
+
+                        <small>
+
+                            6 modalidades
+
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon orange">
+
+                        <i class="bi bi-person-workspace"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Professores</span>
+
+                        <strong>18</strong>
+
+                        <small>
+
+                            Equipe ativa
+
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon purple">
+
+                        <i class="bi bi-clipboard-check-fill"></i>
+
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Pré-matrículas</span>
+
+                        <strong>24</strong>
+
+                        <small class="attention">
+
+                            Aguardando análise
+
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 GRID PRINCIPAL
+            ================================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- PRÉ-MATRÍCULAS -->
+
+                <section class="admin-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                MOVIMENTAÇÃO
+                            </span>
+
+                            <h2>
+                                Pré-matrículas recentes
+                            </h2>
+
+                        </div>
+
+
+                        <a href="#" class="panel-link">
+
+                            Ver todas
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Candidato</th>
+
+                                    <th>Oficina</th>
+
+                                    <th>Data</th>
+
+                                    <th>Status</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="table-person">
+
+                                            <div class="person-avatar">
+                                                JS
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    João Silva
+                                                </strong>
+
+                                                <span>
+                                                    12 anos
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Música
+                                    </td>
+
+
+                                    <td>
+                                        16/08/2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status pending">
+                                            Pendente
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="table-person">
+
+                                            <div class="person-avatar">
+                                                MS
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Maria Santos
+                                                </strong>
+
+                                                <span>
+                                                    10 anos
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Ballet
+                                    </td>
+
+
+                                    <td>
+                                        15/08/2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status approved">
+                                            Aprovada
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="table-person">
+
+                                            <div class="person-avatar">
+                                                PO
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Pedro Oliveira
+                                                </strong>
+
+                                                <span>
+                                                    14 anos
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Futebol
+                                    </td>
+
+
+                                    <td>
+                                        15/08/2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status pending">
+                                            Pendente
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="table-person">
+
+                                            <div class="person-avatar">
+                                                AS
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Ana Souza
+                                                </strong>
+
+                                                <span>
+                                                    9 anos
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Informática
+                                    </td>
+
+
+                                    <td>
+                                        14/08/2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status approved">
+                                            Aprovada
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     DISTRIBUIÇÃO DAS OFICINAS
+                ================================================== -->
+
+                <section class="admin-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                PARTICIPAÇÃO
+                            </span>
+
+                            <h2>
+                                Alunos por oficina
+                            </h2>
+
+                        </div>
+
+                        <button
+                            class="panel-menu"
+                            aria-label="Mais opções"
+                        >
+
+                            <i class="bi bi-three-dots"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="workshop-list">
+
+
+                        <div class="workshop-item">
+
+                            <div class="workshop-info">
+
+                                <span class="workshop-icon music">
+                                    <i class="bi bi-music-note-beamed"></i>
+                                </span>
+
+                                <div>
+
+                                    <strong>Música</strong>
+
+                                    <span>124 alunos</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress">
+
+                                <div
+                                    class="progress-bar"
+                                    style="width: 82%"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="workshop-item">
+
+                            <div class="workshop-info">
+
+                                <span class="workshop-icon football">
+                                    <i class="bi bi-dribbble"></i>
+                                </span>
+
+                                <div>
+
+                                    <strong>Futebol</strong>
+
+                                    <span>96 alunos</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress">
+
+                                <div
+                                    class="progress-bar"
+                                    style="width: 68%"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="workshop-item">
+
+                            <div class="workshop-info">
+
+                                <span class="workshop-icon ballet">
+                                    <i class="bi bi-stars"></i>
+                                </span>
+
+                                <div>
+
+                                    <strong>Ballet</strong>
+
+                                    <span>58 alunos</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress">
+
+                                <div
+                                    class="progress-bar"
+                                    style="width: 48%"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="workshop-item">
+
+                            <div class="workshop-info">
+
+                                <span class="workshop-icon judo">
+                                    <i class="bi bi-shield-check"></i>
+                                </span>
+
+                                <div>
+
+                                    <strong>Judô</strong>
+
+                                    <span>52 alunos</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress">
+
+                                <div
+                                    class="progress-bar"
+                                    style="width: 43%"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="workshop-item">
+
+                            <div class="workshop-info">
+
+                                <span class="workshop-icon computer">
+                                    <i class="bi bi-laptop"></i>
+                                </span>
+
+                                <div>
+
+                                    <strong>Informática</strong>
+
+                                    <span>72 alunos</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress">
+
+                                <div
+                                    class="progress-bar"
+                                    style="width: 57%"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="workshop-item">
+
+                            <div class="workshop-info">
+
+                                <span class="workshop-icon school">
+                                    <i class="bi bi-book"></i>
+                                </span>
+
+                                <div>
+
+                                    <strong>Reforço Escolar</strong>
+
+                                    <span>48 alunos</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress">
+
+                                <div
+                                    class="progress-bar"
+                                    style="width: 39%"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================================
+                 ATIVIDADES + ACESSOS RÁPIDOS
+            ================================================== -->
+
+            <div class="bottom-grid">
+
+
+                <section class="admin-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                SISTEMA
+                            </span>
+
+                            <h2>
+                                Atividade recente
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+
+                        <div class="activity">
+
+                            <div class="activity-icon green">
+
+                                <i class="bi bi-person-plus-fill"></i>
+
+                            </div>
+
+                            <div class="activity-text">
+
+                                <strong>
+                                    Nova pré-matrícula
+                                </strong>
+
+                                <span>
+                                    João Silva solicitou inscrição em Música.
+                                </span>
+
+                                <small>
+                                    Há 15 minutos
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity">
+
+                            <div class="activity-icon blue">
+
+                                <i class="bi bi-check-lg"></i>
+
+                            </div>
+
+                            <div class="activity-text">
+
+                                <strong>
+                                    Matrícula aprovada
+                                </strong>
+
+                                <span>
+                                    Maria Santos foi aprovada para Ballet.
+                                </span>
+
+                                <small>
+                                    Há 1 hora
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity">
+
+                            <div class="activity-icon orange">
+
+                                <i class="bi bi-person-workspace"></i>
+
+                            </div>
+
+                            <div class="activity-text">
+
+                                <strong>
+                                    Professor cadastrado
+                                </strong>
+
+                                <span>
+                                    Novo professor adicionado ao sistema.
+                                </span>
+
+                                <small>
+                                    Hoje, 14:32
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="admin-panel quick-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                ACESSO RÁPIDO
+                            </span>
+
+                            <h2>
+                                Ações
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <a href="#" class="quick-action">
+
+                            <span class="quick-action-icon green">
+
+                                <i class="bi bi-person-plus-fill"></i>
+
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Novo aluno
+                                </strong>
+
+                                <span>
+                                    Cadastrar aluno
+                                </span>
+
+                            </div>
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </a>
+
+
+                        <a href="#" class="quick-action">
+
+                            <span class="quick-action-icon blue">
+
+                                <i class="bi bi-collection-fill"></i>
+
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Nova turma
+                                </strong>
+
+                                <span>
+                                    Criar uma turma
+                                </span>
+
+                            </div>
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </a>
+
+
+                        <a href="#" class="quick-action">
+
+                            <span class="quick-action-icon orange">
+
+                                <i class="bi bi-clipboard-check-fill"></i>
+
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Pré-matrículas
+                                </strong>
+
+                                <span>
+                                    24 aguardando análise
+                                </span>
+
+                            </div>
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </a>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="admin-footer">
+
+            <span>
+                © 2026 Projeto Semente PB
+            </span>
+
+            <span>
+                Área Administrativa · Demonstração
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- Overlay mobile -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <script src="../assets/js/admin.js"></script>
+
+</body>
+
+</html>
