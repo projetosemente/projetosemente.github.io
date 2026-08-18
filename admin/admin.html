@@ -1,1 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo | Projeto Semente</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/img/favicon.png">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img
+                src="assets/img/logo1.png"
+                alt="Projeto Semente">
+
+        </div>
+
+        <div class="sidebar-label">
+            ADMINISTRAÇÃO
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a
+                href="#"
+                class="menu-item active">
+
+                <i class="bi bi-grid-1x2-fill"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-people-fill"></i>
+
+                <span>Alunos</span>
+
+                <b>128</b>
+
+            </a>
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-person-workspace"></i>
+
+                <span>Professores</span>
+
+                <b>18</b>
+
+            </a>
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-mortarboard-fill"></i>
+
+                <span>Turmas</span>
+
+                <b>12</b>
+
+            </a>
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-clipboard-check-fill"></i>
+
+                <span>Pré-matrículas</span>
+
+                <b class="badge">7</b>
+
+            </a>
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-images"></i>
+
+                <span>Galeria</span>
+
+            </a>
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-building"></i>
+
+                <span>Parceiros</span>
+
+            </a>
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-gear-fill"></i>
+
+                <span>Configurações</span>
+
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="index.html"
+                class="menu-item">
+
+                <i class="bi bi-globe2"></i>
+
+                <span>Ver site</span>
+
+            </a>
+
+            <button
+                type="button"
+                id="btnSair"
+                class="menu-item logout">
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>Sair</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="admin-main">
+
+        <header class="admin-header">
+
+            <button
+                id="btnSidebar"
+                class="mobile-menu">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+            <div>
+
+                <span class="header-label">
+                    PAINEL ADMINISTRATIVO
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+            <div class="admin-user">
+
+                <div class="user-avatar">
+
+                    <i class="bi bi-person-fill"></i>
+
+                </div>
+
+                <div>
+
+                    <strong id="nomeUsuario">
+                        Administrador
+                    </strong>
+
+                    <small>
+                        Administrador
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             DASHBOARD
+        ================================================== -->
+
+        <section class="dashboard">
+
+            <div class="welcome-card">
+
+                <div>
+
+                    <span>
+                        PROJETO SEMENTE
+                    </span>
+
+                    <h2>
+                        Olá, Administrador! 👋
+                    </h2>
+
+                    <p>
+                        Aqui você acompanha as principais
+                        informações do Projeto Semente.
+                    </p>
+
+                </div>
+
+                <i class="bi bi-flower1"></i>
+
+            </div>
+
+
+            <!-- CARDS -->
+
+            <div class="stats-grid">
+
+                <article class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                    <div>
+                        <span>Alunos</span>
+                        <strong>128</strong>
+                        <small>
+                            +12 este mês
+                        </small>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="bi bi-person-workspace"></i>
+                    </div>
+
+                    <div>
+                        <span>Professores</span>
+                        <strong>18</strong>
+                        <small>
+                            Equipe ativa
+                        </small>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+
+                    <div>
+                        <span>Turmas</span>
+                        <strong>12</strong>
+                        <small>
+                            Em andamento
+                        </small>
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="bi bi-clipboard-check-fill"></i>
+                    </div>
+
+                    <div>
+                        <span>Pré-matrículas</span>
+                        <strong>7</strong>
+                        <small>
+                            Aguardando análise
+                        </small>
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- =================================================
+                 ATIVIDADES
+            ================================================== -->
+
+            <div class="dashboard-grid">
+
+                <section class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span>
+                                ATIVIDADE RECENTE
+                            </span>
+
+                            <h3>
+                                Últimos registros
+                            </h3>
+
+                        </div>
+
+                        <button>
+                            Ver todos
+                        </button>
+
+                    </div>
+
+                    <div class="activity-list">
+
+                        <div class="activity">
+
+                            <div class="activity-icon green">
+                                <i class="bi bi-person-plus-fill"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Nova pré-matrícula
+                                </strong>
+
+                                <p>
+                                    Maria Eduarda foi cadastrada.
+                                </p>
+
+                                <small>
+                                    Há 20 minutos
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity">
+
+                            <div class="activity-icon blue">
+                                <i class="bi bi-person-check-fill"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Novo aluno
+                                </strong>
+
+                                <p>
+                                    João Pedro foi matriculado.
+                                </p>
+
+                                <small>
+                                    Hoje, 14:32
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity">
+
+                            <div class="activity-icon orange">
+                                <i class="bi bi-images"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Galeria atualizada
+                                </strong>
+
+                                <p>
+                                    6 novas fotos foram adicionadas.
+                                </p>
+
+                                <small>
+                                    Ontem
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- OFICINAS -->
+
+                <section class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span>
+                                OFICINAS
+                            </span>
+
+                            <h3>
+                                Alunos por oficina
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <div class="oficina-list">
+
+                        <div class="oficina">
+
+                            <div>
+
+                                <strong>
+                                    Música
+                                </strong>
+
+                                <span>
+                                    36 alunos
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span
+                                    style="width: 78%">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="oficina">
+
+                            <div>
+
+                                <strong>
+                                    Futebol
+                                </strong>
+
+                                <span>
+                                    29 alunos
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span
+                                    style="width: 64%">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="oficina">
+
+                            <div>
+
+                                <strong>
+                                    Informática
+                                </strong>
+
+                                <span>
+                                    24 alunos
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span
+                                    style="width: 52%">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="oficina">
+
+                            <div>
+
+                                <strong>
+                                    Ballet
+                                </strong>
+
+                                <span>
+                                    18 alunos
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span
+                                    style="width: 40%">
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="assets/js/admin.js"></script>
+
+</body>
+</html>
