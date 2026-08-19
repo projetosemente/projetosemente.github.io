@@ -264,6 +264,20 @@ textarea {
 
 
 /* ==============================================================
+   MENU ATIVO
+============================================================== */
+
+#menu a.ativo {
+    color: #05401F;
+    font-weight: 700;
+}
+
+#menu a.ativo::after {
+    width: 100%;
+}
+
+
+/* ==============================================================
    HEADER ACTIONS
 ============================================================== */
 
@@ -1429,17 +1443,89 @@ footer hr {
 
     /* HEADER */
 
+    .header-container {
+        position: relative;
+    }
+
     #menu {
+        display: none;
+        position: absolute;
+        z-index: 1001;
+        top: calc(100% + 8px);
+        left: 12px;
+        right: 12px;
+        width: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, .16);
+    }
+
+    #menu.aberto,
+    #header:has(#btn-menu[aria-expanded="true"]) #menu {
+        display: block;
+    }
+
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+    }
+
+    #menu li {
+        width: 100%;
+    }
+
+    #menu a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 44px;
+        padding: 8px 12px;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+
+    #menu a:hover,
+    #menu a.ativo {
+        background: #F2E9CE;
+        color: #05401F;
+    }
+
+    #menu a::after,
+    #menu a:hover::after {
         display: none;
     }
 
     .btn-menu {
-        display: block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1002;
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 8px;
+        background: transparent;
+        color: #05401F;
+        cursor: pointer;
+        touch-action: manipulation;
+    }
+
+    .btn-menu:focus-visible {
+        outline: 2px solid #8DA632;
+        outline-offset: 2px;
     }
 
     .header-actions {
         margin-left: auto;
-        margin-right: 15px;
+        margin-right: 10px;
     }
 
 
